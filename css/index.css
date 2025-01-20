@@ -239,65 +239,10 @@ h2 {
   font-size: 60px;
   margin: 0;
 }
-#customer-reviews {
-  background-color: #191616;
-  padding: 50px 0;
-  text-align: center;
-}
-
-#customer-reviews h2 {
-  font-size: 36px;
-  margin-bottom: 30px;
-}
-
-.reviews-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.reviews {
-  display: flex;
-  overflow: hidden;
-  width: 80%;
-  max-width: fit-content; /* Ensures reviews fit within the container */
-}
-
-.review {
-  min-width: 200px;
-  max-width: 200px;
-  margin: 0 10px;
-  background-color: #272525;
-  padding: 20px;
-  border: 1px solid #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px #fff;
-  transition: transform 0.3s ease-in-out;
-  color: #f8f8f8;
-}
-
-.arrow {
-  color: rgb(252, 224, 68);
-  background-color: #191616;
-  padding: auto;
-  font-size: 60px;
-  cursor: pointer;
-  z-index: 1; /* Ensures the arrows stay above the reviews */
-}
-
-.arrow:hover {
-  color: rgb(222, 196, 54);
-}
-
-.left-arrow {
-  position: absolute;
-  left: 10px; /* Keeps the arrow within the container */
-}
-
-.right-arrow {
-  position: absolute;
-  right: 10px; /* Keeps the arrow within the container */
+.offer-item a:link,
+a:visited {
+  text-decoration: none;
+  color: white;
 }
 
 footer {
