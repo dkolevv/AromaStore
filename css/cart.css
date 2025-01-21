@@ -1,0 +1,66 @@
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+main h1 {
+  text-align: center;
+}
+.cart-container {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #080808;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  color: #ddd;
+}
+
+.cart-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.cart-item-info {
+  flex-grow: 1;
+}
+
+.cart-item-info h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.cart-item-info p {
+  margin: 5px 0 0;
+  color: rgb(252, 224, 68);
+}
+
+.cart-total {
+  text-align: right;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.cart-item-info button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+.cart-item-info button:hover {
+  background-color: #ff1a1a;
+}

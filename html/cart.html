@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Aroma Store</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="..\css\contact.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
     <link rel="stylesheet" href="..\css\styles.css" />
-    <!--Stylish font I found in Google Fonts-->
+    <link rel="stylesheet" href="..\css\cart.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,6 +16,32 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+    <script>
+      function loadCart() {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let cartContainer = document.getElementById("cart-container");
+        let totalPrice = 0;
+        cartContainer.innerHTML = "";
+        cart.forEach((item) => {
+          let productElement = document.createElement("div");
+          productElement.className = "cart-item";
+          productElement.innerHTML = `
+                    <img src="../img/${item.id}.jpg" alt="${item.name}">
+                    <div class="cart-item-info">
+                        <h3>${item.name}</h3>
+                        <p>Price: $${item.price}</p>
+                        <button onclick="removeFromCart(${item.id})">Remove</button>
+                    </div>
+                `;
+          cartContainer.appendChild(productElement);
+          totalPrice += item.price;
+        });
+        document.querySelector(
+          ".cart-total span"
+        ).textContent = `$${totalPrice.toFixed(2)}`;
+      }
+      window.onload = loadCart;
+    </script>
   </head>
   <body>
     <header>
@@ -38,28 +61,13 @@
       </div>
     </header>
     <main>
-      <section id="contact-us">
-        <div class="container">
-          <h1><span class="contact-us-text">Contact Us</span></h1>
-          <h2>
-            If you have any questions or need assistance, please feel free to
-            contact us using the form below.
-          </h2>
-          <form action="" method="post" onsubmit="handleSubmit(event)">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required />
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required />
-            <label for="subject">Subject:</label>
-            <input type="text" id="subject" name="subject" required />
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-            <button type="submit" id="submit-button">Send Message</button>
-          </form>
-        </div>
-      </section>
+      <h1><span class="dynalight-regular">Your Cart</span></h1>
+      <div id="cart-container">
+        <div class="cart-total">Total: <span>dd</span></div>
+      </div>
     </main>
 
+    <script src="../js/scripts.js"></script>
     <footer>
       <div class="footer-container">
         <div class="footer-section about">
@@ -89,6 +97,5 @@
         <p>&copy; 2025 Perfume Store . All Rights Reserved.</p>
       </div>
     </footer>
-    <script src="../js/scripts.js"></script>
   </body>
 </html>

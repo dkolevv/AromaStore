@@ -33,7 +33,7 @@
           <a href="about.html">About us</a>
           <a href="contact.html">Contact</a>
         </nav>
-        <a href="#"
+        <a href="cart.html"
           ><img src="..\img\kolichka.png" alt="Cart" width="25" height="25"
         /></a>
       </div>
@@ -48,76 +48,95 @@
       </div>
       <div class="product-grid">
         <div class="product-item">
-          <img src="../img/oferta1.webp" alt="Pink Princess perfume" />
+          <img src="../img/1.jpg" alt="Pink Princess perfume" />
           <h3>Pink Princess</h3>
           <p class="old-price">$150.00</p>
           <p class="new-price">$120.00</p>
-          <button class="add-to-cart">
+          <button
+            class="add-to-cart"
+            onclick="addToCart(1, 'Pink Princess', 120.00)"
+          >
             <a href="cart.html">Add to cart</a>
           </button>
         </div>
         <div class="product-item">
-          <img src="../img/oferta2.webp" alt="Silver Charm perfume" />
+          <img src="../img/2.jpg" alt="Silver Charm perfume" />
           <h3>Silver Charm</h3>
           <p class="old-price">$89.99</p>
           <p class="new-price">$70.00</p>
-          <button class="add-to-cart">
+          <button
+            class="add-to-cart"
+            class="add-to-cart"
+            onclick="addToCart(2, 'Silver Charm', 70.00)"
+          >
             <a href="cart.html">Add to cart</a>
           </button>
         </div>
         <div class="product-item">
-          <img src="../img/oferta3.jpg" alt="Blue Flower perfume" />
+          <img src="../img/3.jpg" alt="Blue Flower perfume" />
           <h3>Blue Flower</h3>
           <p class="old-price">$200.00</p>
           <p class="new-price">$160.00</p>
-          <button class="add-to-cart">
+          <button
+            class="add-to-cart"
+            onclick="addToCart(3, 'Blue Flower', 160.00)"
+          >
             <a href="cart.html">Add to cart</a>
           </button>
         </div>
         <div class="product-item">
-          <img src="../img/oferta5.jpg" alt="Brilliant Lotus perfume" />
+          <img src="../img/5.jpg" alt="Brilliant Lotus perfume" />
           <h3>Brilliant Lotus</h3>
           <p class="old-price">$160.00</p>
           <p class="new-price">$120.00</p>
-          <button class="add-to-cart">
+          <button
+            class="add-to-cart"
+            onclick="addToCart(4, 'Brilliant Lotus', 120.00)"
+          >
             <a href="cart.html">Add to cart</a>
           </button>
         </div>
       </div>
       <div class="product-grid">
         <div class="product-item">
-          <img src="../img/oferta6.webp" alt="Gentle Lavender perfume" />
+          <img src="../img/6.jpg" alt="Gentle Lavender perfume" />
           <h3>Gentle Lavender</h3>
           <p class="old-price">$100.00</p>
           <p class="new-price">$50.00</p>
-          <button class="add-to-cart">
+          <button
+            class="add-to-cart"
+            onclick="addToCart(5, 'Gentle Lavender', 50.00)"
+          >
             <a href="cart.html">Add to cart</a>
           </button>
         </div>
         <div class="product-item">
-          <img src="../img/oferta7.avif" alt="Hibiscus Touch perfume" />
+          <img src="../img/7.jpg" alt="Hibiscus Touch perfume" />
           <h3>Hibiscus Touch</h3>
           <p class="old-price">$129.99</p>
           <p class="new-price">$99.99</p>
-          <button class="add-to-cart">
+          <button
+            class="add-to-cart"
+            onclick="addToCart(6, 'Hibiscus Touch', 99.99)"
+          >
             <a href="cart.html">Add to cart</a>
           </button>
         </div>
         <div class="product-item">
-          <img src="../img/oferta8.avif" alt="Sahara perfume" />
+          <img src="../img/8.jpg" alt="Sahara perfume" />
           <h3>Sahara</h3>
           <p class="old-price">$300.00</p>
           <p class="new-price">$260.00</p>
-          <button class="add-to-cart">
+          <button class="add-to-cart" onclick="addToCart(7, 'Sahara', 260.00)">
             <a href="cart.html">Add to cart</a>
           </button>
         </div>
         <div class="product-item">
-          <img src="../img/oferta4.jpg" alt="Jasmine" />
+          <img src="../img/4.jpg" alt="Jasmine" />
           <h3>Jasmine</h3>
           <p class="old-price">$160.00</p>
           <p class="new-price">$110.00</p>
-          <button class="add-to-cart">
+          <button class="add-to-cart" onclick="addToCart(8, 'Jasmine', 110.00)">
             <a href="cart.html">Add to cart</a>
           </button>
         </div>
@@ -152,5 +171,6 @@
         <p>&copy; 2025 Perfume Store . All Rights Reserved.</p>
       </div>
     </footer>
+    <script src="../js/scripts.js"></script>
   </body>
 </html>
